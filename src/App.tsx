@@ -296,7 +296,7 @@ function App() {
                       className="flex items-center gap-2 text-purple-600 dark:text-purple-400 hover:bg-purple-50 dark:hover:bg-purple-900/20 px-3 py-2 rounded-lg transition-colors duration-200"
                     >
                       <RefreshCw size={18} />
-                      Generate All New Tasks
+                      Generate New Tasks
                     </button>
                   </div>
 
@@ -306,7 +306,7 @@ function App() {
                       className="flex items-center gap-2 bg-purple-600 hover:bg-purple-700 text-white font-semibold py-2 px-4 rounded-lg transition-colors duration-200"
                     >
                       <Save size={20} />
-                      Save Changes
+                      Save
                     </button>
                   </div>
 
