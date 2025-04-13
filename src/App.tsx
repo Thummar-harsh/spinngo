@@ -88,40 +88,40 @@ function App() {
       "Freeze in place like a statue for 10 seconds"
     ],
     Normal: [
-"Name 3 fruits that are red",
-  "Think of 5 animals that live in the water",
-  "Say 3 words that rhyme with 'cat'",
-  "Name the months of the year in order",
-  "Spell your name out loud, backward",
-  "List 3 things you can write with",
-  "Count to 20 in twos (2, 4, 6...)",
-  "Name 4 things you can wear on your head",
-  "Say the days of the week in reverse",
-  "Name 3 things that are cold",
-  "Say the alphabet without singing it",
-  "Name 5 vegetables",
-  "Name a country for each letter in your first name",
-  "List 3 animals that start with the letter B",
-  "Say a food that starts with each letter of 'EAT'",
-  "Name something that flies but isn’t a bird",
-  "List 3 words that mean 'happy'",
-  "Say a sentence using only 5 words",
-  "Name something that floats and something that sinks",
-  "Say one fun fact you know"
+      "Name 3 fruits that are red",
+      "Think of 5 animals that live in the water",
+      "Say 3 words that rhyme with 'cat'",
+      "Name the months of the year in order",
+      "Spell your name out loud, backward",
+      "List 3 things you can write with",
+      "Count to 20 in twos (2, 4, 6...)",
+      "Name 4 things you can wear on your head",
+      "Say the days of the week in reverse",
+      "Name 3 things that are cold",
+      "Say the alphabet without singing it",
+      "Name 5 vegetables",
+      "Name a country for each letter in your first name",
+      "List 3 animals that start with the letter B",
+      "Say a food that starts with each letter of 'EAT'",
+      "Name something that flies but isn’t a bird",
+      "List 3 words that mean 'happy'",
+      "Say a sentence using only 5 words",
+      "Name something that floats and something that sinks",
+      "Say one fun fact you know"
     ]
   };
 
   const handleSpin = () => {
     setIsSpinning(true);
     const categoryTasks = tasks[selectedCategory];
-    
+
     let spinCount = 0;
     const maxSpins = 20;
     const spinInterval = setInterval(() => {
       const randomTask = categoryTasks[Math.floor(Math.random() * categoryTasks.length)];
       setCurrentTask(randomTask);
       spinCount++;
-      
+
       if (spinCount >= maxSpins) {
         clearInterval(spinInterval);
         setIsSpinning(false);
@@ -242,13 +242,36 @@ function App() {
             {isSpinning ? 'Spinning...' : 'Spin!'}
           </button>
 
-          <div className={`bg-gray-50 dark:bg-gray-700 rounded-lg p-6 min-h-[100px] flex items-center justify-center text-center transition-opacity duration-200 ${isSpinning ? 'animate-pulse' : ''}`}>
+          {/* <div className={`bg-gray-50 dark:bg-gray-700 rounded-lg p-6 min-h-[100px] flex items-center justify-center text-center transition-opacity duration-200 ${isSpinning ? 'animate-pulse' : ''}`}>
             {currentTask ? (
               <p className="text-xl text-gray-800 dark:text-gray-200 font-medium">{currentTask}</p>
             ) : (
               <p className="text-gray-400 dark:text-gray-500">Click spin to get your task!</p>
             )}
+          </div> */}
+
+
+
+
+
+          <div
+            className={`bg-gray-50 dark:bg-gray-700 rounded-lg p-6 min-h-[100px] flex items-center justify-center text-center transition-opacity duration-200 w-full`}
+            style={{ minHeight: '100px', width: '280px' }}
+          >
+            {currentTask ? (
+              <p className="text-xl text-gray-800 dark:text-gray-200 font-medium break-words max-w-full">
+                {currentTask}
+              </p>
+            ) : (
+              <p className="text-gray-400 dark:text-gray-500 break-words max-w-full">
+                Click spin to get your task!
+              </p>
+            )}
           </div>
+
+
+
+
 
           {isEditing && (
             <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4">
@@ -264,7 +287,10 @@ function App() {
                 </div>
 
                 <div className="space-y-4">
-                  <div className="flex justify-end">
+                  <div className='flex justify-between items-center'>
+
+                  
+                  <div className="flex justify-start">
                     <button
                       onClick={generateAllNewTasks}
                       className="flex items-center gap-2 text-purple-600 dark:text-purple-400 hover:bg-purple-50 dark:hover:bg-purple-900/20 px-3 py-2 rounded-lg transition-colors duration-200"
@@ -274,22 +300,19 @@ function App() {
                     </button>
                   </div>
 
-                  {editingTasks.map((task, index) => (
-                    <div key={index} className="flex gap-2">
-                      <input
-                        type="text"
-                        value={task}
-                        onChange={(e) => updateTask(index, e.target.value)}
-                        className="flex-1 px-3 py-2 border dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 bg-white dark:bg-gray-700 text-gray-800 dark:text-gray-200"
-                      />
-                      <button
-                        onClick={() => removeTask(index)}
-                        className="p-2 text-red-500 hover:bg-red-50 dark:hover:bg-red-900/20 rounded-lg"
-                      >
-                        <X size={20} />
-                      </button>
-                    </div>
-                  ))}
+                  <div className="flex justify-end">
+                    <button
+                      onClick={saveChanges}
+                      className="flex items-center gap-2 bg-purple-600 hover:bg-purple-700 text-white font-semibold py-2 px-4 rounded-lg transition-colors duration-200"
+                    >
+                      <Save size={20} />
+                      Save Changes
+                    </button>
+                  </div>
+
+
+
+                  </div>
 
                   <div className="flex gap-2">
                     <input
@@ -314,17 +337,27 @@ function App() {
                       <Plus size={20} />
                     </button>
                   </div>
+
+
+                  {editingTasks.map((task, index) => (
+                    <div key={index} className="flex gap-2">
+                      <input
+                        type="text"
+                        value={task}
+                        onChange={(e) => updateTask(index, e.target.value)}
+                        className="flex-1 px-3 py-2 border dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 bg-white dark:bg-gray-700 text-gray-800 dark:text-gray-200"
+                      />
+                      <button
+                        onClick={() => removeTask(index)}
+                        className="p-2 text-red-500 hover:bg-red-50 dark:hover:bg-red-900/20 rounded-lg"
+                      >
+                        <X size={20} />
+                      </button>
+                    </div>
+                  ))}
+
                 </div>
 
-                <div className="mt-6 flex justify-end">
-                  <button
-                    onClick={saveChanges}
-                    className="flex items-center gap-2 bg-purple-600 hover:bg-purple-700 text-white font-semibold py-2 px-4 rounded-lg transition-colors duration-200"
-                  >
-                    <Save size={20} />
-                    Save Changes
-                  </button>
-                </div>
               </div>
             </div>
           )}
