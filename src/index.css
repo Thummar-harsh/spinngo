@@ -4,8 +4,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
 
 
-body {
-    font-family: 'Press Start 2P', cursive;
+
+  body {
+    font-family: cursive;
     font-size: 16px;  /* Base size for desktop */
   }
   
