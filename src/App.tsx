@@ -186,7 +186,7 @@ function App() {
             </div>
             <div className="flex items-center space-x-4">
               <a
-                href="https://forms.gle/your-google-form-url"
+                href="https://forms.gle/p9wb8mi57UQF3vgu7"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center space-x-1 text-gray-600 dark:text-gray-300 hover:text-purple-500 dark:hover:text-purple-400 transition-colors duration-200"
