@@ -185,22 +185,28 @@ function App() {
               <span className="ml-2 text-xl font-semibold text-gray-800 dark:text-white">Spin N Go</span>
             </div>
             <div className="flex items-center space-x-4">
-              <a
-                href="https://forms.gle/p9wb8mi57UQF3vgu7"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center space-x-1 text-gray-600 dark:text-gray-300 hover:text-purple-500 dark:hover:text-purple-400 transition-colors duration-200"
-              >
-                <MessageSquare size={20} />
-                <span>Feedback</span>
-              </a>
-              <button
-                onClick={toggleDarkMode}
-                className="p-2 rounded-lg bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors duration-200"
-                title={isDark ? 'Switch to light mode' : 'Switch to dark mode'}
-              >
-                {isDark ? <Sun size={20} /> : <Moon size={20} />}
-              </button>
+            <a
+  href="https://forms.gle/p9wb8mi57UQF3vgu7"
+  target="_blank"
+  rel="noopener noreferrer"
+  class="flex items-center space-x-2 text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition-all duration-300 ease-in-out transform hover:scale-105"
+>
+  {/* <!-- Icon with better color contrast --> */}
+  <MessageSquare size={22} class="text-purple-500 dark:text-purple-400 transition-colors duration-200" />
+  
+  {/* <!-- Feedback text with improved typography --> */}
+  <span class="text-lg font-medium">Feedback</span>
+</a>
+
+<button
+  onClick={toggleDarkMode}
+  className="p-3 rounded-full bg-gray-200 dark:bg-gray-600 text-gray-800 dark:text-gray-200 hover:bg-gray-300 dark:hover:bg-gray-500 focus:outline-none focus:ring-2 focus:ring-purple-400 transition-all duration-300 ease-in-out transform hover:scale-105"
+  title={isDark ? 'Switch to light mode' : 'Switch to dark mode'}
+>
+  {/* Sun icon for light mode and Moon icon for dark mode */}
+  {isDark ? <Sun size={22} className="transition-colors duration-200" /> : <Moon size={22} className="transition-colors duration-200" />}
+</button>
+
             </div>
           </div>
         </div>
@@ -211,9 +217,10 @@ function App() {
 
 
         <div className="bg-white dark:bg-gray-800 rounded-3xl shadow-xl p-6 space-y-6">
-          <h2 className="text-2xl font-bold text-[#00022B] dark:text-gray-300 mb-4 ">
+          <h2 className="text-2xl font-bold text-[#00022B] dark:text-gray-300 mb-4 text-center">
             Let’s Play
           </h2>
+
 
           <div className="flex items-center gap-2">
             <div className="relative flex-1">
@@ -245,9 +252,9 @@ function App() {
           <button
             onClick={handleSpin}
             disabled={isSpinning || isEditing}
-            className="w-full bg-gradient-to-r from-purple-600 to-purple-700 hover:from-purple-700 hover:to-purple-800 text-white font-semibold py-3 px-6 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+            className="w-full bg-gradient-to-r from-purple-600 to-purple-700 hover:from-purple-700 hover:to-purple-800 text-white font-semibold py-3 px-6 rounded-3xl shadow-md hover:shadow-lg transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
 
-            // className="w-full bg-purple-600 hover:bg-purple-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
+          // className="w-full bg-purple-600 hover:bg-purple-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
           >
             {isSpinning ? 'Spinning...' : 'Spin!'}
           </button>
