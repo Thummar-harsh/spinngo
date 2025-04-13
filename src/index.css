@@ -4,15 +4,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
 
 
-
-  body {
-    font-family: cursive;
-    font-size: 16px;  /* Base size for desktop */
-  }
-  
-  @media (max-width: 768px) {
-    body {
-      font-size: 14px;  /* Adjust font size on smaller screens */
-    }
+body {
+    font-family: poppins, sans-serif;
   }
   
