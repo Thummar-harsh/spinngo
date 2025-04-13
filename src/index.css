@@ -5,6 +5,13 @@
 
 
 body {
-    font-family: cursive;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 16px;  /* Base size for desktop */
+  }
+  
+  @media (max-width: 768px) {
+    body {
+      font-size: 14px;  /* Adjust font size on smaller screens */
+    }
   }
   
