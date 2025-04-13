@@ -208,7 +208,13 @@ function App() {
 
       {/* Main Content */}
       <div className="flex-grow max-w-md mx-auto pt-12 p-4">
+
+
         <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-6 space-y-6">
+        <h2 className="text-2xl font-bold text-[#00022B] dark:text-gray-300 mb-4 ">
+  Let’s Play
+</h2>
+
           <div className="flex items-center gap-2">
             <div className="relative flex-1">
               <select
@@ -275,7 +281,9 @@ function App() {
 
           {isEditing && (
             <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4">
+
               <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-6 w-full max-w-md max-h-[80vh] overflow-y-auto">
+
                 <div className="flex justify-between items-center mb-4">
                   <h2 className="text-xl font-bold text-gray-800 dark:text-white">Edit {selectedCategory} Tasks</h2>
                   <button
@@ -289,30 +297,32 @@ function App() {
                 <div className="space-y-4">
                   <div className='flex justify-between items-center'>
 
-                  
-                  <div className="flex justify-start">
-                    <button
-                      onClick={generateAllNewTasks}
-                      className="flex items-center gap-2 text-purple-600 dark:text-purple-400 hover:bg-purple-50 dark:hover:bg-purple-900/20 px-3 py-2 rounded-lg transition-colors duration-200"
-                    >
-                      <RefreshCw size={18} />
-                      Generate New Tasks
-                    </button>
+
+                    <div className="flex justify-start">
+                      <button
+                        onClick={generateAllNewTasks}
+                        className="flex items-center gap-2 text-purple-600 dark:text-purple-400 hover:bg-purple-50 dark:hover:bg-purple-900/20 px-3 py-2 rounded-lg transition-colors duration-200"
+                      >
+                        <RefreshCw size={18} />
+                        Generate New Tasks
+                      </button>
+                    </div>
+
+                    <div className="flex justify-end">
+                      <button
+                        onClick={saveChanges}
+                        className="flex items-center gap-2 bg-purple-600 hover:bg-purple-700 text-white font-semibold py-2 px-4 rounded-lg transition-colors duration-200"
+                      >
+                        <Save size={20} />
+                        Save
+                      </button>
+                    </div>
+
+
+
                   </div>
 
-                  <div className="flex justify-end">
-                    <button
-                      onClick={saveChanges}
-                      className="flex items-center gap-2 bg-purple-600 hover:bg-purple-700 text-white font-semibold py-2 px-4 rounded-lg transition-colors duration-200"
-                    >
-                      <Save size={20} />
-                      Save
-                    </button>
-                  </div>
 
-
-
-                  </div>
 
                   <div className="flex gap-2">
                     <input
