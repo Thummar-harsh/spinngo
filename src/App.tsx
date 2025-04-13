@@ -210,17 +210,18 @@ function App() {
       <div className="flex-grow max-w-md mx-auto pt-12 p-4">
 
 
-        <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-6 space-y-6">
-        <h2 className="text-2xl font-bold text-[#00022B] dark:text-gray-300 mb-4 ">
-  Let’s Play
-</h2>
+        <div className="bg-white dark:bg-gray-800 rounded-3xl shadow-xl p-6 space-y-6">
+          <h2 className="text-2xl font-bold text-[#00022B] dark:text-gray-300 mb-4 ">
+            Let’s Play
+          </h2>
 
           <div className="flex items-center gap-2">
             <div className="relative flex-1">
               <select
                 value={selectedCategory}
                 onChange={(e) => setSelectedCategory(e.target.value)}
-                className="w-full px-4 py-3 rounded-lg bg-gray-50 dark:bg-gray-700 border border-gray-200 dark:border-gray-600 appearance-none pr-10 text-gray-700 dark:text-gray-200 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                className="w-full px-4 py-3 rounded-2xl bg-gray-50 dark:bg-gray-700 border border-gray-200 dark:border-gray-600 appearance-none pr-10 text-gray-700 dark:text-gray-200 shadow-sm focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-200 hover:shadow-md disabled:opacity-50 disabled:cursor-not-allowed"
+
                 disabled={isSpinning || isEditing}
               >
                 {Object.keys(tasks).map((category) => (
@@ -234,7 +235,8 @@ function App() {
             <button
               onClick={startEditing}
               disabled={isSpinning || isEditing}
-              className="p-3 rounded-lg bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 text-gray-600 dark:text-gray-300 transition-colors duration-200"
+              className="p-3 rounded-2xl bg-gray-100 dark:bg-gray-700 shadow hover:shadow-md hover:scale-105 dark:hover:shadow-lg text-gray-600 dark:text-gray-300 transition-all duration-200"
+
             >
               <Edit2 size={20} />
             </button>
@@ -243,7 +245,9 @@ function App() {
           <button
             onClick={handleSpin}
             disabled={isSpinning || isEditing}
-            className="w-full bg-purple-600 hover:bg-purple-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
+            className="w-full bg-gradient-to-r from-purple-600 to-purple-700 hover:from-purple-700 hover:to-purple-800 text-white font-semibold py-3 px-6 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+
+            // className="w-full bg-purple-600 hover:bg-purple-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
           >
             {isSpinning ? 'Spinning...' : 'Spin!'}
           </button>
@@ -261,7 +265,9 @@ function App() {
 
 
           <div
-            className={`bg-gray-50 dark:bg-gray-700 rounded-lg p-6 min-h-[100px] flex items-center justify-center text-center transition-opacity duration-200 w-full`}
+            // className={`bg-gray-50 dark:bg-gray-700 rounded-lg p-6 min-h-[100px] flex items-center justify-center text-center transition-opacity duration-200 w-full`}
+            className={`bg-gray-50 dark:bg-gray-700 rounded-2xl p-6 min-h-[120px] flex items-center justify-center text-center transition-all duration-300 w-full shadow-md hover:shadow-lg border border-gray-200 dark:border-gray-600`}
+
             style={{ minHeight: '100px', width: '280px' }}
           >
             {currentTask ? (
