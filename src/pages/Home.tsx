@@ -99,23 +99,28 @@ const Home = () => {
   const [editingTasks, setEditingTasks] = useState<string[]>([]);
   const [newTask, setNewTask] = useState('');
 
+  
   const handleSpin = () => {
+    // 🔊 Play spin sound
+    const spinSound = new Audio('/sounds/spin.mp3');
+    spinSound.play();
+  
     const categoryTasks = tasks[selectedCategory];
     if (categoryTasks.length === 0) return;
-
+  
     setIsSpinning(true);
     let spinCount = 0;
     const maxSpins = 20;
     const spinSpeed = 60; // Faster = more spin effect
-
+  
     const spinInterval = setInterval(() => {
       const randomTask = categoryTasks[Math.floor(Math.random() * categoryTasks.length)];
       setCurrentTask(randomTask);
       spinCount++;
-
+  
       if (spinCount >= maxSpins) {
         clearInterval(spinInterval);
-
+  
         // Add a final delay and reveal the actual selected task
         setTimeout(() => {
           const finalTask = categoryTasks[Math.floor(Math.random() * categoryTasks.length)];
@@ -125,6 +130,7 @@ const Home = () => {
       }
     }, spinSpeed);
   };
+  
 
 
   const startEditing = () => {
