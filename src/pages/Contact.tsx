@@ -2,7 +2,9 @@ import React from 'react';
 
 const Contact = () => {
   return (
-    <div className="bg-white dark:bg-gray-800 max-w-5xl mx-auto p-8 rounded-lg shadow-lg">
+    <div className="bg-white dark:bg-gray-800 max-w-5xl mx-auto my-6 px-4 py-6 md:px-8 md:py-8 rounded-xl shadow-lg">
+
+    {/* <div className="bg-white dark:bg-gray-800 max-w-5xl mx-auto p-8 rounded-lg shadow-lg"> */}
       <h1 className="text-4xl font-bold text-gray-800 dark:text-gray-100 mb-6">Contact Us</h1>
       <p className="text-lg text-gray-700 dark:text-gray-300 mb-4">
         We'd love to hear from you!
