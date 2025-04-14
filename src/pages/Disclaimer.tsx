@@ -7,7 +7,7 @@ const Disclaimer = () => {
       {/* <div className="bg-white dark:bg-gray-800 max-w-5xl mx-auto p-8 rounded-lg shadow-lg"> */}
       <h1 className="text-4xl font-bold text-gray-800 dark:text-gray-100 mb-6">Disclaimer</h1>
       <p className="text-lg text-gray-700 dark:text-gray-300 mb-4">
-        Task Spinner is designed for fun, lighthearted use, and casual task generation among friends, pairs, or small groups.
+        Spin N Go is designed for fun, lighthearted use, and casual task generation among friends, pairs, or small groups.
       </p>
       <p className="text-lg text-gray-700 dark:text-gray-300 mb-6">
         By using this app, you agree to the following:

@@ -9,16 +9,17 @@ const About = () => {
 
       <h1 className="text-4xl font-bold text-gray-800 dark:text-gray-100 mb-6">About Us</h1>
       <p className="text-lg text-gray-700 dark:text-gray-300 mb-4">
-        Welcome to <strong>Task Spinner</strong> – a fun and interactive game designed for two players or small groups!
+        Welcome to <strong>Spin N Go</strong> – a fun and interactive game designed for two players or small groups!
+       
       </p>
       <p className="text-lg text-gray-700 dark:text-gray-300 mb-6">
-        Whether you're hanging out with friends, working on tasks together, or just looking for a fun way to challenge each other, Task Spinner adds a twist of randomness and excitement.
+        Whether you're hanging out with friends, working on tasks together, or just looking for a fun way to challenge each other, Spin N Go adds a twist of randomness and excitement.
         Just pick a mode, tap Spin, and let the app decide your next move or task!
       </p>
 
       <h2 className="text-3xl font-semibold text-gray-800 dark:text-gray-100 mb-4">Why we built this:</h2>
       <p className="text-lg text-gray-700 dark:text-gray-300 mb-6">
-        We believe doing tasks (even the boring ones) can be more enjoyable when shared. With a little bit of competition, cooperation, and surprise, Task Spinner turns everyday tasks into a game.
+        We believe doing tasks (even the boring ones) can be more enjoyable when shared. With a little bit of competition, cooperation, and surprise, Spin N Go turns everyday tasks into a game.
       </p>
 
       <h2 className="text-3xl font-semibold text-gray-800 dark:text-gray-100 mb-4">Perfect for:</h2>

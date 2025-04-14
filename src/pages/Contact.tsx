@@ -33,7 +33,7 @@ const Contact = () => {
       </div>
 
       <p className="text-lg text-gray-700 dark:text-gray-300 mb-6">
-        Thanks for using Task Spinner — we truly appreciate your support!
+        Thanks for using Spin N Go — we truly appreciate your support!
       </p>
 
       <div className="mt-8">

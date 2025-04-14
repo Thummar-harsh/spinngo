@@ -7,10 +7,10 @@ const Privacy = () => {
 
       <h1 className="text-4xl font-bold text-gray-800 dark:text-gray-100 mb-6">Privacy Policy</h1>
       <p className="text-lg text-gray-700 dark:text-gray-300 mb-4">
-        At <strong>Task Spinner</strong>, your privacy matters to us.
+        At <strong>Spin N Go</strong>, your privacy matters to us.
       </p>
       <p className="text-lg text-gray-700 dark:text-gray-300 mb-6">
-        We do not collect any personal information when you use our app. Task Spinner is designed to be simple, fun, and safe — without tracking you or asking for unnecessary details.
+        We do not collect any personal information when you use our app. Spin N Go is designed to be simple, fun, and safe — without tracking you or asking for unnecessary details.
       </p>
 
       <h2 className="text-3xl font-semibold text-gray-800 dark:text-gray-100 mb-4">Here’s what you need to know:</h2>
