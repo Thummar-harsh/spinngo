@@ -102,7 +102,7 @@ const Home = () => {
   
   const handleSpin = () => {
     // 🔊 Play spin sound
-    const spinSound = new Audio('/sounds/spin.mp3');
+    const spinSound = new Audio('/sounds/Spin.mp3');
     spinSound.play();
   
     const categoryTasks = tasks[selectedCategory];
