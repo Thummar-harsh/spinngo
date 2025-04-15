@@ -183,7 +183,7 @@ const Home = () => {
 
   return (
     <div className="flex-grow max-w-md mx-auto pt-12 p-4">
-      <div className="bg-[#f7f2f7] dark:bg-gray-800 rounded-3xl shadow-xl p-6 space-y-6">
+      <div className="bg-[#dcddf5] dark:bg-gray-800 rounded-3xl shadow-xl p-6 space-y-6">
         <h2 className="text-2xl font-bold text-[#00022B] dark:text-gray-300 mb-4 text-center">
           Let’s Play
         </h2>

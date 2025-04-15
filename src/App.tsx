@@ -29,7 +29,16 @@ function App() {
     <Router>
       <div className="flex flex-col min-h-screen bg-white dark:bg-gray-900 transition-colors duration-300">
         <Navbar isDark={isDark} toggleDarkMode={toggleDarkMode} />
-        <main className="flex-grow">
+        <main
+  className="flex-grow transition-colors duration-300"
+  style={{
+    background: isDark 
+      ? 'linear-gradient(135deg, #0f0c29, #302b63, #24243e)' // Dark mode gradient
+      : 'linear-gradient(135deg, #a7c7e7, #b2d7f7)' // Light mode cool gradient
+  }}
+>
+
+
           <Routes>
             <Route path="/" element={<Home />} /> {/* Home page route */}
             <Route path="/about" element={<AboutUs />} /> {/* About Us page route */}
