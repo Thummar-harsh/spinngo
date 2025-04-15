@@ -7,6 +7,7 @@ import AboutUs from './pages/AboutUs'; // Import the AboutUs component
 import Contact from './pages/Contact'; // Import the Contact component
 import Disclaimer from './pages/Disclaimer'; // Import the Contact component
 import Privacy from './pages/Privacy'; // Import the Contact component
+import Im18 from './pages/Im18'; // Import the Contact component
 
 function App() {
   const [isDark, setIsDark] = useState(() => {
@@ -24,6 +25,16 @@ function App() {
   }, [isDark]);
 
   const toggleDarkMode = () => setIsDark(!isDark);
+
+  useEffect(() => {
+    // Automatically enable dark mode for certain routes like '/im18' or '/xnxx'
+    if (location.pathname === '/im18' || location.pathname === '/xnxx') {
+      document.documentElement.classList.add('dark');
+      setIsDark(true); // Turn on dark mode when on these routes
+    } else {
+      // Turn off dark mode on other routes
+    }
+  }, [location]); // Dependency array to run when location changes
 
   return (
     <Router>
@@ -45,6 +56,8 @@ function App() {
             <Route path="/contact" element={<Contact />} /> {/* About Us page route */}
             <Route path="/Privacy" element={<Privacy />} /> {/* About Us page route */}
             <Route path="/disclaimer" element={<Disclaimer />} /> {/* About Us page route */}
+            <Route path="/im18" element={<Im18 />} /> 
+            <Route path="/xnxx" element={<Im18 />} />
           </Routes>
         </main>
         <Footer />
