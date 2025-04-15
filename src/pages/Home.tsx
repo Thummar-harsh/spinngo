@@ -214,12 +214,13 @@ const Home = () => {
         </div>
 
         <button
-          onClick={handleSpin}
-          disabled={isSpinning || isEditing}
-          className="w-full bg-gradient-to-r from-purple-600 to-purple-700 hover:from-purple-700 hover:to-purple-800 text-white font-semibold py-3 px-6 rounded-3xl shadow-md hover:shadow-lg transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
-        >
-          {isSpinning ? 'Spinning...' : 'Spin!'}
-        </button>
+  onClick={handleSpin}
+  disabled={isSpinning || isEditing}
+  className="w-full bg-[#6E52E4] hover:bg-[#5b42c2] text-white font-semibold py-3 px-6 rounded-3xl shadow-md hover:shadow-lg transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+>
+  {isSpinning ? 'Spinning...' : 'Spin!'}
+</button>
+
 
         <div className={`bg-gray-50 dark:bg-gray-700 rounded-2xl p-6 min-h-[120px] flex items-center justify-center text-center transition-all duration-300 w-full shadow-md hover:shadow-lg border border-gray-200 dark:border-gray-600`}>
           {currentTask ? (
