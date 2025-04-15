@@ -103,7 +103,7 @@ const Im18 = () => {
   return (
     <div className="flex-grow max-w-md mx-auto pt-12 p-4">
     <div className="bg-[#2b0a3d] dark:bg-[#1f082e] rounded-3xl shadow-xl p-6 space-y-6">
-      <h2 className="text-2xl font-bold text-[#ff8a9a] dark:text-[#ffb1c1] mb-4 text-center">Let’s Play</h2>
+      <h2 className="text-2xl font-bold text-[#ff8a9a] dark:text-[#ffb1c1] mb-4 text-center">Let’s Play (18+)</h2>
   
       <div className="flex items-center gap-2">
         <div className="relative flex-1">
