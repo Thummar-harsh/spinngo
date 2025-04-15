@@ -193,7 +193,7 @@ const Home = () => {
             <select
               value={selectedCategory}
               onChange={(e) => setSelectedCategory(e.target.value)}
-              className="w-full px-4 py-3 rounded-2xl bg-gray-50 dark:bg-gray-700 border border-gray-200 dark:border-gray-600 appearance-none pr-10 text-gray-700 dark:text-gray-200 shadow-sm focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-200 hover:shadow-md disabled:opacity-50 disabled:cursor-not-allowed"
+              className="w-full px-4 py-3 rounded-2xl bg-gray-50 dark:bg-gray-700 border border-gray-200 dark:border-gray-600 appearance-none pr-10 text-gray-700 dark:text-gray-200 shadow-sm focus:outline-none focus:ring-2 focus:ring-[#5b42c2] focus:border-transparent transition-all duration-200 hover:shadow-md disabled:opacity-50 disabled:cursor-not-allowed"
               disabled={isSpinning || isEditing}
             >
               {Object.keys(tasks).map((category) => (
@@ -214,13 +214,12 @@ const Home = () => {
         </div>
 
         <button
-  onClick={handleSpin}
-  disabled={isSpinning || isEditing}
-  className="w-full bg-[#6E52E4] hover:bg-[#5b42c2] text-white font-semibold py-3 px-6 rounded-3xl shadow-md hover:shadow-lg transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
->
-  {isSpinning ? 'Spinning...' : 'Spin!'}
-</button>
-
+          onClick={handleSpin}
+          disabled={isSpinning || isEditing}
+          className="w-full bg-[#5b42c2] hover:bg-[#4b35a2] text-white font-semibold py-3 px-6 rounded-3xl shadow-md hover:shadow-lg transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+        >
+          {isSpinning ? 'Spinning...' : 'Spin!'}
+        </button>
 
         <div className={`bg-gray-50 dark:bg-gray-700 rounded-2xl p-6 min-h-[120px] flex items-center justify-center text-center transition-all duration-300 w-full shadow-md hover:shadow-lg border border-gray-200 dark:border-gray-600`}>
           {currentTask ? (
@@ -251,14 +250,14 @@ const Home = () => {
                 <div className='flex justify-between items-center'>
                   <button
                     onClick={generateAllNewTasks}
-                    className="flex items-center gap-2 text-purple-600 dark:text-purple-400 hover:bg-purple-50 dark:hover:bg-purple-900/20 px-3 py-2 rounded-lg transition-colors duration-200"
+                    className="flex items-center gap-2 text-[#5b42c2] hover:bg-[#f0edff] dark:hover:bg-purple-900/20 px-3 py-2 rounded-lg transition-colors duration-200"
                   >
                     <RefreshCw size={18} />
                     Generate New Tasks
                   </button>
                   <button
                     onClick={saveChanges}
-                    className="flex items-center gap-2 bg-purple-600 hover:bg-purple-700 text-white font-semibold py-2 px-4 rounded-lg transition-colors duration-200"
+                    className="flex items-center gap-2 bg-[#5b42c2] hover:bg-[#4b35a2] text-white font-semibold py-2 px-4 rounded-lg transition-colors duration-200"
                   >
                     <Save size={20} />
                     Save
@@ -271,19 +270,19 @@ const Home = () => {
                     value={newTask}
                     onChange={(e) => setNewTask(e.target.value)}
                     placeholder="Add new task..."
-                    className="flex-1 px-3 py-2 border dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 bg-white dark:bg-gray-700 text-gray-800 dark:text-gray-200 placeholder-gray-400 dark:placeholder-gray-500"
+                    className="flex-1 px-3 py-2 border dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#5b42c2] bg-white dark:bg-gray-700 text-gray-800 dark:text-gray-200 placeholder-gray-400 dark:placeholder-gray-500"
                     onKeyPress={(e) => e.key === 'Enter' && addNewTask()}
                   />
                   <button
                     onClick={generateTask}
-                    className="p-2 text-purple-500 dark:text-purple-400 hover:bg-purple-50 dark:hover:bg-purple-900/20 rounded-lg"
+                    className="p-2 text-[#5b42c2] hover:bg-[#f0edff] dark:hover:bg-purple-900/20 rounded-lg"
                     title="Generate random task"
                   >
                     <Wand2 size={20} />
                   </button>
                   <button
                     onClick={addNewTask}
-                    className="p-2 text-purple-500 dark:text-purple-400 hover:bg-purple-50 dark:hover:bg-purple-900/20 rounded-lg"
+                    className="p-2 text-[#5b42c2] hover:bg-[#f0edff] dark:hover:bg-purple-900/20 rounded-lg"
                   >
                     <Plus size={20} />
                   </button>
@@ -295,7 +294,7 @@ const Home = () => {
                       type="text"
                       value={task}
                       onChange={(e) => updateTask(index, e.target.value)}
-                      className="flex-1 px-3 py-2 border dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 bg-white dark:bg-gray-700 text-gray-800 dark:text-gray-200"
+                      className="flex-1 px-3 py-2 border dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#5b42c2] bg-white dark:bg-gray-700 text-gray-800 dark:text-gray-200"
                     />
                     <button
                       onClick={() => removeTask(index)}
@@ -313,5 +312,4 @@ const Home = () => {
     </div>
   );
 };
-
 export default Home;
