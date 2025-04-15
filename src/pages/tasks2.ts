@@ -1,19 +1,61 @@
 export const tasks: Record<string, string[]> = {
   Smooth: [
-    "Leave a sweet note for each other to find",
-    "Recreate your first date at home"
+    "Give your partner a 1-minute forehead kiss session.",
+    "Whisper three things you love about your partner, slowly.",
+    "Lightly massage your partner’s hands or shoulders for 2 minutes.",
+    "Play your partner’s favorite song and slow dance together.",
+    "Run your fingers slowly through your partner’s hair or neck.",
+    "Share your favorite memory together—while holding eye contact.",
+    "Kiss your partner like it’s your first time again.",
+    "Gently trace your lips along your partner’s neck (with permission).",
+    "Cuddle in silence for one full minute.",
+    "Hold your partner’s face and tell them your favorite thing about them.",
+    "Trace your partner’s lips with your finger—slow and soft.",
+    "Whisper a compliment into your partner’s ear while holding them close.",
   ],
+
   Fire: [
-    "Make a funny face for 5 seconds",
-    "Try to talk while holding your tongue (careful 😅)"
+    "Describe how you’d seduce your partner in one sentence—make it steamy.",
+    "Remove one clothing item (your choice).",
+    "Let your partner blindfold you for 1 minute and surprise you with a gentle touch.",
+    "Share your favorite fantasy (keep it playful or deep).",
+    "Slowly kiss your partner’s favorite spot (neck, shoulder, etc.).",
+    "Recreate a movie-style kiss scene.",
+    "Choose one spot your partner can kiss you—no questions.",
+    "Let your partner guide your hands for 1 minute—wherever they want (within comfort).",
+    "Give a slow kiss, then pause 1 inch away for 5 seconds.",
+    "Describe your partner’s body using only metaphors.",
+    "Whisper your favorite dirty thought to your partner.",
+    "Pick a body part—kiss it 3 different ways.",
   ],
+
   Wild: [
-    "Smile for 10 seconds without stopping",
-    "Share the last thing you Googled",
-    "Name three things you can see around you"
+    "Roleplay a 30-second scene where you're both strangers meeting for the first time.",
+    "Use your phone to send a naughty message—even if you're sitting together.",
+    "Choose a 'no hands' challenge: kiss or tease without hands for 30 seconds.",
+    "Give your partner a strip tease (one item, slow).",
+    "Whisper your wildest dream or desire—make it vivid.",
+    "Let your partner tie your hands gently for 2 minutes and kiss you wherever they like (consent first).",
+    "Do a lap dance for your partner (just have fun with it).",
+    "Set a timer for 1 minute: only kissing—everywhere but the lips.",
+    "Act like you're in a steamy music video—your partner is the camera.",
+    "Switch roles: dominant and submissive for 1 round.",
+    "Lick or kiss your partner's ear while saying something bold.",
+    "Draw something naughty on your partner’s body (with fingers or ice).",
   ],
-  All_Mood: [
-    "Name 3 fruits that are red",
-    "Think of 5 animals that live in the water"
+
+  All: [
+    "Partner picks any task from any category.",
+    "Do one Smooth, one Fire, and one Wild task in a row.",
+    "Let your partner ask any 18+ question—you must answer or take a dare.",
+    "Whisper the alphabet on your partner’s skin (they pick the spot).",
+    "Choose: 2 minutes of soft teasing or 30 seconds of intense passion.",
+    "Spin again, but double the heat.",
+    "Give your partner a surprise kiss—anywhere they won’t expect.",
+    "Your partner becomes your ‘boss’ for the next 3 minutes—follow instructions.",
+    "Switch phones for 1 minute—send a flirty note to each other.",
+    "Kiss your partner without using your lips (use nose, cheeks, etc.).",
+    "Pick a body part and worship it for 1 full minute.",
+    "Play rock-paper-scissors. Winner gives a task, loser must do it—no refusal.",
   ],
 };
