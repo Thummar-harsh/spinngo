@@ -7,6 +7,19 @@ const Home = () => {
 
   const taskIdeas = {
     Romantic: [
+      "Name a movie character you'd date.",
+      "Share your favorite love song lyric.",
+      "Describe a romantic dinner — but only using emojis.",
+      "Create a fake dating profile bio for yourself.",
+      "Invent a romantic office holiday (like Valentine's spin-off).",
+      "Say something romantic in the most awkward voice possible.",
+      "Name a color that feels like love to you.",
+      "Compliment the person to your left like you're in a romance novel.",
+      "If love was a snack, what would it be?",
+      "Name a romantic gesture that would impress you.",
+
+
+
       "Leave a sweet note for each other to find",
       "Recreate your first date at home",
       "Draw each other without looking at the paper",
@@ -21,14 +34,27 @@ const Home = () => {
       "Make a time capsule of your relationship so far",
       "Give your partner a cute nickname they haven’t heard yet",
       "Create a mini scrapbook page using things around you",
-      "Tell your partner what your favorite feature of theirs is—physically and emotionally",
       "Wrap your partner in a blanket burrito and tell them why they’re your favorite comfort",
       "Share your favorite photo together and say why it means so much",
       "Plan your dream vacation together, no budget",
       "Tell the story of how you'd write your love story as a movie plot",
-      "Send a voice note saying something romantic right now"
+
     ],
     Fun: [
+      "Pretend your chair is a horse and ride it (safely!).",
+      "Make the weirdest noise you can.",
+      "Invent a silly new handshake with someone.",
+      "Create a 5-second dance to your favorite emoji.",
+      "Pretend you're in an infomercial and sell your stapler.",
+      "Say something dramatic in slow motion.",
+      "Do a tongue-twister 3 times fast.",
+      "Act out your favorite meme.",
+      "Challenge someone to a 10-second staring contest.",
+      "Do a mic-drop moment with your pen.",
+
+
+
+
 
       "Make a funny face for 5 seconds",
       "Try to talk while holding your tongue (careful 😅)",
@@ -42,10 +68,31 @@ const Home = () => {
       "Act like a chicken for 15 seconds",
       "Say something serious with a completely silly face",
       "Mimic your favorite cartoon character",
-      "Do your best runway walk… in slow motion"
+      "Do your best runway walk… in slow motion",
+      "Act like you’re stuck in a windstorm",
+      "Say something really boring like it’s the most exciting thing ever",
+      "Do your best impression of someone else in the room",
+      "Invent a secret handshake with yourself",
+      "Talk about your favorite food like it's a long-lost love",
+      "Do a fake magic trick and try to convince everyone it's real",
+      "Spell your name with your body (get creative!)"
 
     ],
     Casual: [
+      "What’s your favorite way to spend a lazy Sunday?",
+      "Name a hobby you wish you had more time for.",
+      "Which snack would you turn into a perfume?",
+      "What’s your most-used emoji?",
+      "If you were a season, which one would you be?",
+      "Share a comfort show/movie you rewatch often.",
+      "What’s one sound you love hearing?",
+      "If you could rename one weekday, what would it be?",
+      "Describe your current vibe in one word.",
+      "What’s your most irrational fear?",
+
+
+
+
       "Smile for 10 seconds without stopping",
       "Share the last thing you Googled",
       "Name three things you can see around you",
@@ -65,9 +112,34 @@ const Home = () => {
       "Talk like a pirate for 15 seconds",
       "Do your best slow-motion run across the room",
       "Say something sweet in the weirdest voice you can",
-      "Freeze in place like a statue for 10 seconds"
+      "Freeze in place like a statue for 10 seconds",
+      "Say 3 things you're grateful for—super fast",
+      "Compliment someone in the most dramatic way possible",
+      "Pretend you’re hosting a cooking show for 15 seconds",
+      "Give a weather report for the room you're in",
+      "Tell a joke, even if it’s terrible",
+      "Pretend to be a celebrity giving an interview",
+      "Spell your favorite snack out loud",
+      "Act like your favorite animal for 5 seconds",
+      "Give a motivational speech to your socks",
+      "Make up a word and give it a definition",
+      "Tell a short story that includes a banana, a spaceship, and a sneeze"
     ],
     Normal: [
+      "What’s your most productive time of day?",
+      "How do you organize your to-do list?",
+      "What's a small win you had this week?",
+      "Share a shortcut or life hack you use at work.",
+      "What’s your dream workspace setup?",
+      "What motivates you to keep going on hard days?",
+      "If work had a theme song, what should it be?",
+      "Name a tool you wish existed for your job.",
+      "What's the most unusual thing you've done for work?",
+      "Describe the perfect coffee break in 3 words.",
+
+
+
+
       "Name 3 fruits that are red",
       "Think of 5 animals that live in the water",
       "Say 3 words that rhyme with 'cat'",
@@ -87,7 +159,16 @@ const Home = () => {
       "List 3 words that mean 'happy'",
       "Say a sentence using only 5 words",
       "Name something that floats and something that sinks",
-      "Say one fun fact you know"
+      "Say one fun fact you know",
+      "Name something that smells good and something that smells bad",
+      "Think of something taller than you and smaller than your hand",
+      "Say a made-up word and give it a meaning",
+      "Name 3 things that roll",
+      "Describe your day using only 3 nouns",
+      "Say a color that’s also a fruit",
+      "Name something that can fly and swim",
+      "Name 3 things you can do with your eyes closed",
+      "Make up a riddle and say it out loud"
     ]
   };
 
@@ -99,28 +180,28 @@ const Home = () => {
   const [editingTasks, setEditingTasks] = useState<string[]>([]);
   const [newTask, setNewTask] = useState('');
 
-  
+
   const handleSpin = () => {
     // 🔊 Play spin sound
     const spinSound = new Audio('/sounds/Spin.mp3');
     spinSound.play();
-  
+
     const categoryTasks = tasks[selectedCategory];
     if (categoryTasks.length === 0) return;
-  
+
     setIsSpinning(true);
     let spinCount = 0;
     const maxSpins = 20;
     const spinSpeed = 60; // Faster = more spin effect
-  
+
     const spinInterval = setInterval(() => {
       const randomTask = categoryTasks[Math.floor(Math.random() * categoryTasks.length)];
       setCurrentTask(randomTask);
       spinCount++;
-  
+
       if (spinCount >= maxSpins) {
         clearInterval(spinInterval);
-  
+
         // Add a final delay and reveal the actual selected task
         setTimeout(() => {
           const finalTask = categoryTasks[Math.floor(Math.random() * categoryTasks.length)];
@@ -130,7 +211,7 @@ const Home = () => {
       }
     }, spinSpeed);
   };
-  
+
 
 
   const startEditing = () => {

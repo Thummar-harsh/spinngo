@@ -44,7 +44,7 @@ export const tasks: Record<string, string[]> = {
     "Draw something naughty on your partner’s body (with fingers or ice).",
   ],
 
-  All: [
+  All_Mood: [
     "Partner picks any task from any category.",
     "Do one Smooth, one Fire, and one Wild task in a row.",
     "Let your partner ask any 18+ question—you must answer or take a dare.",
