@@ -1,8 +1,20 @@
 import { useState } from 'react';
 import { Edit2, X, Save, RefreshCw, Plus, ChevronDown, Wand2 } from 'lucide-react';
 import { tasks as initialTasks } from './tasks2';
+// import { tasks as initialTasks } from './tasks';
+import { useEffect } from 'react';
 
 const Im18 = () => {
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      const storedTasks = localStorage.getItem('spinTasks');
+      if (storedTasks) {
+        setTasks(JSON.parse(storedTasks));
+      }
+    }
+  }, []);
+  
+
   const taskIdeas = {
     Smooth: [
       "Give your partner a 1-minute forehead kiss session.",
@@ -121,10 +133,12 @@ const Im18 = () => {
   };
 
   const saveChanges = () => {
-    setTasks((prevTasks) => ({
-      ...prevTasks,
+    const updatedTasks = {
+      ...tasks,
       [selectedCategory]: editingTasks
-    }));
+    };
+    setTasks(updatedTasks);
+    localStorage.setItem('spinTasks', JSON.stringify(updatedTasks));
     setIsEditing(false);
   };
 
