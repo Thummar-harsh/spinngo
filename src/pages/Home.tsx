@@ -2,9 +2,18 @@ import { useState } from 'react';
 import { Edit2, X, Save, RefreshCw, Plus, ChevronDown, Wand2 } from 'lucide-react';
 import { tasks as initialTasks } from './tasks';
 // import { tasks as initialTasks } from './tasks';
+import { useEffect } from 'react';
+
+
 
 const Home = () => {
-
+  useEffect(() => {
+    const storedTasks = localStorage.getItem('spinTasks');
+    if (storedTasks) {
+      setTasks(JSON.parse(storedTasks));
+    }
+  }, []);
+  
   const taskIdeas = {
     Romantic: [
       "Name a movie character you'd date.",
@@ -221,12 +230,15 @@ const Home = () => {
   };
 
   const saveChanges = () => {
-    setTasks((prevTasks) => ({
-      ...prevTasks,
+    const updatedTasks = {
+      ...tasks,
       [selectedCategory]: editingTasks
-    }));
+    };
+    setTasks(updatedTasks);
+    localStorage.setItem('spinTasks', JSON.stringify(updatedTasks));
     setIsEditing(false);
   };
+  
 
 
   const addNewTask = () => {

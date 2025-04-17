@@ -25,6 +25,7 @@ function App() {
   }, [isDark]);
 
   const toggleDarkMode = () => setIsDark(!isDark);
+  
 
   useEffect(() => {
     // Automatically enable dark mode for certain routes like '/im18' or '/xnxx'
@@ -35,6 +36,8 @@ function App() {
       // Turn off dark mode on other routes
     }
   }, [location]); // Dependency array to run when location changes
+
+  
 
   return (
     <Router>
