@@ -8,11 +8,14 @@ import { useEffect } from 'react';
 
 const Home = () => {
   useEffect(() => {
-    const storedTasks = localStorage.getItem('spinTasks');
-    if (storedTasks) {
-      setTasks(JSON.parse(storedTasks));
+    if (typeof window !== 'undefined') {
+      const storedTasks = localStorage.getItem('spinTasks');
+      if (storedTasks) {
+        setTasks(JSON.parse(storedTasks));
+      }
     }
   }, []);
+  
   
   const taskIdeas = {
     Romantic: [
