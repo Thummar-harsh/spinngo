@@ -5,9 +5,11 @@ import { tasks as initialTasks } from './tasks2';
 import { useEffect } from 'react';
 
 const Im18 = () => {
+    const spinTasks = 'spinTasks-im18'
+  
   useEffect(() => {
     if (typeof window !== 'undefined') {
-      const storedTasks = localStorage.getItem('spinTasks');
+      const storedTasks = localStorage.getItem(spinTasks);
       if (storedTasks) {
         setTasks(JSON.parse(storedTasks));
       }

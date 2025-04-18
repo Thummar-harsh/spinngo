@@ -7,9 +7,11 @@ import { useEffect } from 'react';
 
 
 const Home = () => {
+  const spinTasks = 'spinTasks-home'
+
   useEffect(() => {
     if (typeof window !== 'undefined') {
-      const storedTasks = localStorage.getItem('spinTasks');
+      const storedTasks = localStorage.getItem(spinTasks);
       if (storedTasks) {
         setTasks(JSON.parse(storedTasks));
       }
