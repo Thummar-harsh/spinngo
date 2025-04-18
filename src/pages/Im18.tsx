@@ -140,7 +140,8 @@ const Im18 = () => {
       [selectedCategory]: editingTasks
     };
     setTasks(updatedTasks);
-    localStorage.setItem('spinTasks', JSON.stringify(updatedTasks));
+    localStorage.setItem(spinTasks, JSON.stringify(updatedTasks));
+    
     setIsEditing(false);
   };
 
