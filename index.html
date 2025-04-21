@@ -1,15 +1,69 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/x-icon" href="/favicon.png" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 
-    <title>Spin & Go</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Spin & Go | Office Spinner Game</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="/favicon.png" />
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet" />
+
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Spin & Go – Bring some fun to your workplace! Choose from Romantic, Fun, Casual, and Normal categories and spin the wheel!" />
+  <meta name="keywords" content="Spin Game, Office Game, Spinner Wheel, Fun App, Casual Game" />
+  <meta name="author" content="Spin & Go Team" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="Spin & Go | Office Spinner Game" />
+  <meta property="og:description" content="Bring some fun to your workplace! Try Spin & Go now." />
+  <meta property="og:image" content="https://spinngo.in/og-image.png" />
+  <meta property="og:url" content="https://spinngo.in" />
+  <meta property="og:type" content="website" />
+
+  <!-- Twitter Card Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Spin & Go | Office Spinner Game" />
+  <meta name="twitter:description" content="Spin the wheel and spark some fun at work. Choose your vibe and go!" />
+  <meta name="twitter:image" content="https://spinngo.in/og-image.png" />
+
+  <!-- Structured Data (Schema.org) -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Spin & Go",
+      "description": "A fun office spinner game with Romantic, Fun, Casual, and Normal categories.",
+      "url": "https://spinngo.in",
+      "applicationCategory": "GameApplication",
+      "operatingSystem": "All",
+      "image": "https://spinngo.in/og-image.png",
+      "creator": {
+        "@type": "Organization",
+        "name": "Spin & Go Team"
+      }
+    }
+  </script>
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YV3EZ3DD37"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-YV3EZ3DD37');
+  </script>
+</head>
+
+<body>
+  <div id="root"></div>
+  <script type="module" src="/src/main.tsx"></script>
+</body>
+
 </html>
