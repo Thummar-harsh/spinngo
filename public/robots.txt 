@@ -1,0 +1,6 @@
+# robots.txt for https://spinngo.in
+User-agent: *
+Disallow: /private/
+Allow: /
+
+Sitemap: https://spinngo.in/sitemap.xml
