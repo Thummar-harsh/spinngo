@@ -1,5 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { MessageSquare, Sun, Moon, Infinity, Home } from 'lucide-react';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 interface NavbarProps {
   isDark: boolean;
@@ -7,19 +8,13 @@ interface NavbarProps {
 }
 
 const Navbar: React.FC<NavbarProps> = ({ isDark, toggleDarkMode }) => {
-  const [isCouple, setIsCouple] = useState<boolean>(() => {
-    const stored = localStorage.getItem('isCouple');
-    return stored === null ? true : JSON.parse(stored);
-  });
+  const location = useLocation();
+  const navigate = useNavigate();
 
-  useEffect(() => {
-    localStorage.setItem('isCouple', JSON.stringify(isCouple));
-  }, [isCouple]);
+  const isCouple = location.pathname === '/couple';
 
   const handleLinkClick = () => {
-    const url = isCouple ? '/couple' : '/';
-    window.open(url, '_self');
-    setIsCouple(!isCouple);
+    navigate(isCouple ? '/' : '/couple');
   };
 
   return (
@@ -36,13 +31,13 @@ const Navbar: React.FC<NavbarProps> = ({ isDark, toggleDarkMode }) => {
 
           {/* Navigation Actions */}
           <div className="flex items-center gap-4">
-            {/* Toggle Button */}
+            {/* Couple / Home Button */}
             <button
               onClick={handleLinkClick}
               className="flex items-center gap-1 text-gray-700 dark:text-gray-300 hover:text-[#6E52E4] dark:hover:text-[#A99BFF] transition transform hover:scale-105 duration-200"
             >
-              {isCouple ? <Infinity size={20} /> : <Home size={20} />}
-              <span className="hidden sm:inline font-medium">{isCouple ? 'Couple' : 'Home'}</span>
+              {isCouple ? <Home size={20} /> : <Infinity size={20} />}
+              <span className="hidden sm:inline font-medium">{isCouple ? 'Home' : 'Couple'}</span>
             </button>
 
             {/* Feedback Link */}

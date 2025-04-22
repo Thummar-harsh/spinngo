@@ -17,8 +17,8 @@ const Home = () => {
       }
     }
   }, []);
-  
-  
+
+
   const taskIdeas = {
     Romantic: [
       "Name a movie character you'd date.",
@@ -243,7 +243,7 @@ const Home = () => {
     localStorage.setItem(spinTasks, JSON.stringify(updatedTasks));
     setIsEditing(false);
   };
-  
+
 
 
   const addNewTask = () => {
