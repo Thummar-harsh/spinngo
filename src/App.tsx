@@ -60,7 +60,7 @@ function App() {
             <Route path="/Privacy" element={<Privacy />} /> {/* About Us page route */}
             <Route path="/disclaimer" element={<Disclaimer />} /> {/* About Us page route */}
             <Route path="/im18" element={<Im18 />} /> 
-            <Route path="/xnxx" element={<Im18 />} />
+            <Route path="/couple" element={<Im18 />} />
           </Routes>
         </main>
         <Footer />
