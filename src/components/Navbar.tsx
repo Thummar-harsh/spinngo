@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { MessageSquare, Sun, Moon, Heart, Monitor } from 'lucide-react';
+import { MessageSquare, Sun, Moon, Infinity, Home } from 'lucide-react';
 
 interface NavbarProps {
   isDark: boolean;
@@ -41,7 +41,7 @@ const Navbar: React.FC<NavbarProps> = ({ isDark, toggleDarkMode }) => {
               onClick={handleLinkClick}
               className="flex items-center gap-1 text-gray-700 dark:text-gray-300 hover:text-[#6E52E4] dark:hover:text-[#A99BFF] transition transform hover:scale-105 duration-200"
             >
-              {isCouple ? <Heart size={20} /> : <Monitor size={20} />}
+              {isCouple ? <Infinity size={20} /> : <Home size={20} />}
               <span className="hidden sm:inline font-medium">{isCouple ? 'Couple' : 'Home'}</span>
             </button>
 
