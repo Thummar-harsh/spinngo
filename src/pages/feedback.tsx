@@ -2,27 +2,27 @@ import React from 'react';
 
 const Feedback = () => {
   return (
-    <div className="max-w-2xl mx-auto px-6 py-12">
-      <div className="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-xl border border-gray-200 dark:border-gray-700">
-        <h1 className="text-3xl sm:text-4xl font-extrabold text-center text-gray-800 dark:text-white mb-4">
-          We'd Love Your Feedback 💬
+    <div className="min-h-screen bg-gray-50 dark:bg-gray-900 flex items-start justify-center px-4 py-8">
+      <div className="w-full max-w-md sm:max-w-2xl bg-white dark:bg-gray-800 rounded-2xl shadow-lg border border-gray-200 dark:border-gray-700 p-5 sm:p-8">
+        <h1 className="text-2xl sm:text-3xl font-bold text-center text-gray-800 dark:text-white mb-4">
+          Share Your Thoughts 💬
         </h1>
-        <p className="text-center text-gray-600 dark:text-gray-300 mb-8">
-          Got a thought? An idea? A bug to squash? Let us know — it helps us make Spin & Go better for everyone!
+        <p className="text-sm sm:text-base text-center text-gray-600 dark:text-gray-300 mb-6">
+          Got feedback, ideas, or issues? We'd love to hear from you!
         </p>
 
-        <iframe
-          src="https://forms.gle/p9wb8mi57UQF3vgu7"
-          title="Feedback Form"
-          width="100%"
-          height="600"
-          className="rounded-lg border border-gray-300 dark:border-gray-600 shadow-sm"
-          frameBorder="0"
-          allowFullScreen
-        ></iframe>
+        <div className="relative w-full overflow-hidden rounded-lg shadow-sm border border-gray-300 dark:border-gray-600">
+          <iframe
+            src="https://forms.gle/p9wb8mi57UQF3vgu7"
+            title="Feedback Form"
+            className="w-full h-[500px] sm:h-[600px] rounded-lg"
+            frameBorder="0"
+            allowFullScreen
+          ></iframe>
+        </div>
 
-        <p className="text-xs text-center text-gray-400 mt-4">
-          Google Forms is used for secure collection. Your feedback stays private.
+        <p className="mt-4 text-center text-xs text-gray-400">
+          Powered by Google Forms. We don’t store your personal data.
         </p>
       </div>
     </div>
