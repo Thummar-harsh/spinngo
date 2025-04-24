@@ -44,6 +44,8 @@ const Navbar: React.FC<NavbarProps> = ({ isDark, toggleDarkMode }) => {
             {/* Feedback Link */}
             <a
               href="https://forms.gle/p9wb8mi57UQF3vgu7"
+              // href="/feedback"
+
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-1 text-gray-700 dark:text-gray-300 hover:text-[#6E52E4] dark:hover:text-[#A99BFF] transition transform hover:scale-105 duration-200"
