@@ -8,6 +8,9 @@ import Contact from './pages/Contact'; // Import the Contact component
 import Disclaimer from './pages/Disclaimer'; // Import the Contact component
 import Privacy from './pages/Privacy'; // Import the Contact component
 import Im18 from './pages/Im18'; // Import the Contact component
+import { AnimatePresence } from 'framer-motion';
+import AnimatedPage from './components/AnimatedPage';
+
 
 function App() {
   const [isDark, setIsDark] = useState(() => {
@@ -53,15 +56,19 @@ function App() {
 >
 
 
-          <Routes>
-            <Route path="/" element={<Home />} /> {/* Home page route */}
-            <Route path="/about" element={<AboutUs />} /> {/* About Us page route */}
-            <Route path="/contact" element={<Contact />} /> {/* About Us page route */}
-            <Route path="/Privacy" element={<Privacy />} /> {/* About Us page route */}
-            <Route path="/disclaimer" element={<Disclaimer />} /> {/* About Us page route */}
-            <Route path="/im18" element={<Im18 />} /> 
-            <Route path="/couple" element={<Im18 />} />
-          </Routes>
+<AnimatePresence mode="wait">
+  <Routes location={location} key={location.pathname}>
+    <Route path="/" element={<AnimatedPage><Home /></AnimatedPage>} />
+    <Route path="/about" element={<AnimatedPage><AboutUs /></AnimatedPage>} />
+    <Route path="/contact" element={<AnimatedPage><Contact /></AnimatedPage>} />
+    <Route path="/privacy" element={<AnimatedPage><Privacy /></AnimatedPage>} />
+    <Route path="/disclaimer" element={<AnimatedPage><Disclaimer /></AnimatedPage>} />
+    <Route path="/im18" element={<AnimatedPage><Im18 /></AnimatedPage>} />
+    <Route path="/couple" element={<AnimatedPage><Im18 /></AnimatedPage>} />
+    <Route path="*" element={<AnimatedPage><div className="p-8 text-center">404 - Page Not Found</div></AnimatedPage>} />
+  </Routes>
+</AnimatePresence>
+
         </main>
         <Footer />
       </div>
