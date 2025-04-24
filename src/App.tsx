@@ -8,6 +8,8 @@ import Contact from './pages/Contact'; // Import the Contact component
 import Disclaimer from './pages/Disclaimer'; // Import the Contact component
 import Privacy from './pages/Privacy'; // Import the Contact component
 import Im18 from './pages/Im18'; // Import the Contact component
+import Feedback from './pages/feedback'; // Import the Contact component
+
 import { AnimatePresence } from 'framer-motion';
 import AnimatedPage from './components/AnimatedPage';
 
@@ -65,6 +67,8 @@ function App() {
     <Route path="/disclaimer" element={<AnimatedPage><Disclaimer /></AnimatedPage>} />
     <Route path="/im18" element={<AnimatedPage><Im18 /></AnimatedPage>} />
     <Route path="/couple" element={<AnimatedPage><Im18 /></AnimatedPage>} />
+    <Route path="/feedback" element={<AnimatedPage><Feedback /></AnimatedPage>} />
+
     <Route path="*" element={<AnimatedPage><div className="p-8 text-center">404 - Page Not Found</div></AnimatedPage>} />
   </Routes>
 </AnimatePresence>

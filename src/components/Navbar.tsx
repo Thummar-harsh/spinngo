@@ -33,12 +33,13 @@ const Navbar: React.FC<NavbarProps> = ({ isDark, toggleDarkMode }) => {
           <div className="flex items-center gap-4">
             {/* Couple / Home Button */}
             <button
-              onClick={handleLinkClick}
-              className="flex items-center gap-1 text-gray-700 dark:text-gray-300 hover:text-[#6E52E4] dark:hover:text-[#A99BFF] transition transform hover:scale-105 duration-200"
-            >
-              {isCouple ? <Home size={20} /> : <Infinity size={20} />}
-              <span className="hidden sm:inline font-medium">{isCouple ? 'Home' : 'Couple'}</span>
-            </button>
+  onClick={handleLinkClick}
+  className="flex items-center gap-1 px-4 py-2 rounded-lg bg-gradient-to-r from-[#6E52E4] to-[#9B72FF] hover:from-[#7E62EE] hover:to-[#AB82FF] text-white font-medium shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-0.5"
+>
+  {isCouple ? <Home size={20} /> : <Infinity size={20} />}
+  <span className="hidden sm:inline ml-1.5">{isCouple ? 'Home' : 'Couple'}</span>
+  <span className="absolute inset-0 rounded-lg bg-white opacity-0 hover:opacity-10 transition-opacity"></span>
+</button>
 
             {/* Feedback Link */}
             <a
