@@ -41,18 +41,14 @@ const Navbar: React.FC<NavbarProps> = ({ isDark, toggleDarkMode }) => {
   <span className="absolute inset-0 rounded-lg bg-white opacity-0 hover:opacity-10 transition-opacity"></span>
 </button>
 
-            {/* Feedback Link */}
-            <a
-              href="https://forms.gle/p9wb8mi57UQF3vgu7"
-              // href="/feedback"
+<a
+  href="/feedback"
+  className="flex items-center gap-1 text-gray-700 dark:text-gray-300 hover:text-[#6E52E4] dark:hover:text-[#A99BFF] transition transform hover:scale-105 duration-200"
+>
+  <MessageSquare size={20} />
+  <span className="hidden sm:inline font-medium">Feedback</span>
+</a>
 
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-1 text-gray-700 dark:text-gray-300 hover:text-[#6E52E4] dark:hover:text-[#A99BFF] transition transform hover:scale-105 duration-200"
-            >
-              <MessageSquare size={20} />
-              <span className="hidden sm:inline font-medium">Feedback</span>
-            </a>
 
             {/* Dark Mode Toggle */}
             <button
